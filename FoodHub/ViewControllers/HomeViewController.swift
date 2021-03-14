@@ -17,12 +17,13 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        SessionManager.i.localData.isLoggedIn = true
+        SessionManager.i.save()
         setupView()
     }
 
     func setupView(){
-        welcomeLabel.text = "Hi Bhavesh,"
+        welcomeLabel.text = "Hi " + SessionManager.i.localData.currentUser.name + ","
         tableView.dataSource = self
         tableView.delegate = self
     }

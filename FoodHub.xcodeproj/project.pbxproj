@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,11 @@
 		1B15979525FCBBD400DEC269 /* FoodHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B15979425FCBBD400DEC269 /* FoodHubUITests.swift */; };
 		1B1597AA25FCD26300DEC269 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1597A925FCD26300DEC269 /* LoginViewController.swift */; };
 		1B1597B025FCD9DC00DEC269 /* MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1597AF25FCD9DC00DEC269 /* MyExtensions.swift */; };
+		1B9E766225FE0DC4006E1E85 /* CartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E766125FE0DC4006E1E85 /* CartData.swift */; };
+		1B9E766725FE0DDD006E1E85 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E766625FE0DDD006E1E85 /* LocalData.swift */; };
+		1B9E766C25FE0E26006E1E85 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E766B25FE0E26006E1E85 /* UserData.swift */; };
+		1B9E767425FE1DDD006E1E85 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E767325FE1DDD006E1E85 /* SessionManager.swift */; };
+		1B9E767E25FE686A006E1E85 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B9E767D25FE686A006E1E85 /* IQKeyboardManagerSwift */; };
 		1BD1A04525FD01160025C866 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1A04425FD01160025C866 /* FoodCell.swift */; };
 		1BD1A04E25FD02020025C866 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1A04D25FD02020025C866 /* FoodData.swift */; };
 		1BD1A05325FD13A10025C866 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1A05225FD13A10025C866 /* ProfileViewController.swift */; };
@@ -59,6 +64,10 @@
 		1B15979625FCBBD400DEC269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B1597A925FCD26300DEC269 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B1597AF25FCD9DC00DEC269 /* MyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensions.swift; sourceTree = "<group>"; };
+		1B9E766125FE0DC4006E1E85 /* CartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartData.swift; sourceTree = "<group>"; };
+		1B9E766625FE0DDD006E1E85 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		1B9E766B25FE0E26006E1E85 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		1B9E767325FE1DDD006E1E85 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		1BD1A04425FD01160025C866 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		1BD1A04D25FD02020025C866 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		1BD1A05225FD13A10025C866 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E767E25FE686A006E1E85 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +174,7 @@
 			children = (
 				1B1597AF25FCD9DC00DEC269 /* MyExtensions.swift */,
 				1BD1A06125FD2E720025C866 /* Constants.swift */,
+				1B9E767325FE1DDD006E1E85 /* SessionManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -180,6 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				1BD1A04D25FD02020025C866 /* FoodData.swift */,
+				1B9E766125FE0DC4006E1E85 /* CartData.swift */,
+				1B9E766625FE0DDD006E1E85 /* LocalData.swift */,
+				1B9E766B25FE0E26006E1E85 /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +214,9 @@
 			dependencies = (
 			);
 			name = FoodHub;
+			packageProductDependencies = (
+				1B9E767D25FE686A006E1E85 /* IQKeyboardManagerSwift */,
+			);
 			productName = FoodHub;
 			productReference = 1B15976F25FCBBD300DEC269 /* FoodHub.app */;
 			productType = "com.apple.product-type.application";
@@ -271,6 +288,9 @@
 				Base,
 			);
 			mainGroup = 1B15976625FCBBD300DEC269;
+			packageReferences = (
+				1B9E767C25FE686A006E1E85 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 1B15977025FCBBD300DEC269 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,11 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E766725FE0DDD006E1E85 /* LocalData.swift in Sources */,
 				1BD1A04E25FD02020025C866 /* FoodData.swift in Sources */,
 				1BD1A06225FD2E720025C866 /* Constants.swift in Sources */,
 				1B1597AA25FCD26300DEC269 /* LoginViewController.swift in Sources */,
 				1BD1A04525FD01160025C866 /* FoodCell.swift in Sources */,
 				1BD1A05D25FD15E80025C866 /* FoodDetailViewController.swift in Sources */,
+				1B9E766C25FE0E26006E1E85 /* UserData.swift in Sources */,
+				1B9E766225FE0DC4006E1E85 /* CartData.swift in Sources */,
+				1B9E767425FE1DDD006E1E85 /* SessionManager.swift in Sources */,
 				1B15977725FCBBD300DEC269 /* HomeViewController.swift in Sources */,
 				1B1597B025FCD9DC00DEC269 /* MyExtensions.swift in Sources */,
 				1B15977325FCBBD300DEC269 /* AppDelegate.swift in Sources */,
@@ -657,6 +681,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B9E767C25FE686A006E1E85 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B9E767D25FE686A006E1E85 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B9E767C25FE686A006E1E85 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B15976725FCBBD300DEC269 /* Project object */;
 }

@@ -17,6 +17,9 @@ class Constants{
         FoodData(img: "wall", name: "Pizza", calogries: "90", price: 30, detail: "Pizza is a type of food typically made from an unleavened dough of wheat flour mixed with water or eggs, and formed into sheets or other shapes, then cooked by boiling or baking."),
         FoodData(img: "wall1", name: "Burger", calogries: "40", price: 5, detail: "Burger is a type of food typically made from an unleavened dough of wheat flour mixed with water or eggs, and formed into sheets or other shapes, then cooked by boiling or baking."),
         ]
+    
+    static let LOCAL_DATA = "LOCAL_DATA"
+    
 }
 
 
