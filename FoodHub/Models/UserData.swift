@@ -12,6 +12,7 @@ class UserData: Codable{
     var email = ""
     var phone = ""
     var password = ""
+    var address = ""
     var orderHistory: [FoodData] = []
     
     init() {

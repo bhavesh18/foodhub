@@ -649,18 +649,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="TLt-ZF-cDC">
-                                <rect key="frame" x="20" y="260" width="374" height="52"/>
+                                <rect key="frame" x="20" y="260" width="374" height="42"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-6D-zEh">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="5Se-5Q-Faq"/>
+                                            <constraint firstAttribute="height" constant="40" id="5Se-5Q-Faq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnt-KS-6oJ">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="1"/>
+                                        <rect key="frame" x="0.0" y="41" width="374" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="jmM-IW-T57"/>
@@ -672,19 +672,19 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="A9r-k8-N6r">
-                                <rect key="frame" x="20" y="332" width="374" height="52"/>
+                                <rect key="frame" x="20" y="322" width="374" height="42"/>
                                 <subviews>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGY-AB-Ldc">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="taY-oT-KME"/>
+                                            <constraint firstAttribute="height" constant="40" id="taY-oT-KME"/>
                                         </constraints>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCg-6l-wVQ">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="1"/>
+                                        <rect key="frame" x="0.0" y="41" width="374" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="xfz-1Y-Ldt"/>
@@ -696,12 +696,12 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tYX-tX-YSg">
-                                <rect key="frame" x="20" y="404" width="374" height="52"/>
+                                <rect key="frame" x="20" y="384" width="374" height="42"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hpz-BQ-LMg">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="O09-Wp-2Jl"/>
+                                            <constraint firstAttribute="height" constant="40" id="O09-Wp-2Jl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -712,7 +712,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ut-af-BAA">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="1"/>
+                                        <rect key="frame" x="0.0" y="41" width="374" height="1"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="hIP-1N-ghw"/>
@@ -724,7 +724,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoN-H3-om7">
-                                <rect key="frame" x="20" y="486" width="374" height="50"/>
+                                <rect key="frame" x="20" y="508" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DJ7-wp-WJe"/>
@@ -758,14 +758,37 @@
                                     <constraint firstAttribute="height" constant="1" id="rbk-CD-HBa"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6zE-DI-hEr">
+                                <rect key="frame" x="20" y="446" width="374" height="42"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrs-f4-QAo">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ey2-zr-JUX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nI-6W-Tzh">
+                                        <rect key="frame" x="0.0" y="41" width="374" height="1"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="soV-kn-j7f"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0nI-6W-Tzh" firstAttribute="width" secondItem="hrs-f4-QAo" secondAttribute="width" id="2jZ-zc-GmU"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7a-T3-LSi"/>
                         <color key="backgroundColor" name="AppGray"/>
                         <constraints>
+                            <constraint firstItem="6zE-DI-hEr" firstAttribute="top" secondItem="tYX-tX-YSg" secondAttribute="bottom" constant="20" id="5BP-jF-Wou"/>
                             <constraint firstItem="TLt-ZF-cDC" firstAttribute="leading" secondItem="9iG-GF-bBW" secondAttribute="leading" constant="20" id="5cC-hv-4aT"/>
                             <constraint firstItem="Gxw-Du-Ayj" firstAttribute="top" secondItem="i5a-Dj-pEa" secondAttribute="bottom" constant="20" id="6xd-7z-HmN"/>
                             <constraint firstItem="eaf-CE-lof" firstAttribute="top" secondItem="T7a-T3-LSi" secondAttribute="top" constant="10" id="7Oy-zw-Tpi"/>
-                            <constraint firstItem="WoN-H3-om7" firstAttribute="top" secondItem="tYX-tX-YSg" secondAttribute="bottom" constant="30" id="8JA-3x-vBa"/>
                             <constraint firstItem="A9r-k8-N6r" firstAttribute="top" secondItem="TLt-ZF-cDC" secondAttribute="bottom" constant="20" id="8j0-GM-OJE"/>
                             <constraint firstItem="tYX-tX-YSg" firstAttribute="top" secondItem="A9r-k8-N6r" secondAttribute="bottom" constant="20" id="D5A-N9-X67"/>
                             <constraint firstItem="lrR-QW-cQS" firstAttribute="top" secondItem="9iG-GF-bBW" secondAttribute="top" constant="-10" id="Dj3-JA-Gqe"/>
@@ -780,15 +803,19 @@
                             <constraint firstItem="tYX-tX-YSg" firstAttribute="trailing" secondItem="TLt-ZF-cDC" secondAttribute="trailing" id="aHI-eK-2Wu"/>
                             <constraint firstItem="i5a-Dj-pEa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WoN-H3-om7" secondAttribute="bottom" constant="10" id="ddB-rL-42C"/>
                             <constraint firstItem="TLt-ZF-cDC" firstAttribute="top" secondItem="lrR-QW-cQS" secondAttribute="bottom" constant="20" id="gMz-4t-FVh"/>
+                            <constraint firstItem="6zE-DI-hEr" firstAttribute="leading" secondItem="TLt-ZF-cDC" secondAttribute="leading" id="hd9-zn-WEA"/>
                             <constraint firstItem="A9r-k8-N6r" firstAttribute="leading" secondItem="T7a-T3-LSi" secondAttribute="leading" constant="20" id="kwL-9Z-BUG"/>
+                            <constraint firstItem="WoN-H3-om7" firstAttribute="top" secondItem="6zE-DI-hEr" secondAttribute="bottom" constant="20" id="lSP-nr-VIx"/>
                             <constraint firstItem="i5a-Dj-pEa" firstAttribute="leading" secondItem="9iG-GF-bBW" secondAttribute="leading" constant="10" id="nKX-3r-4zr"/>
                             <constraint firstItem="eaf-CE-lof" firstAttribute="leading" secondItem="T7a-T3-LSi" secondAttribute="leading" constant="15" id="oKW-0f-aA5"/>
                             <constraint firstItem="lrR-QW-cQS" firstAttribute="leading" secondItem="T7a-T3-LSi" secondAttribute="leading" id="prW-PH-c9e"/>
                             <constraint firstItem="WoN-H3-om7" firstAttribute="leading" secondItem="T7a-T3-LSi" secondAttribute="leading" constant="20" id="trG-K5-48Z"/>
+                            <constraint firstItem="6zE-DI-hEr" firstAttribute="trailing" secondItem="TLt-ZF-cDC" secondAttribute="trailing" id="xSn-XB-iOQ"/>
                             <constraint firstItem="Gxw-Du-Ayj" firstAttribute="leading" secondItem="T7a-T3-LSi" secondAttribute="leading" constant="20" id="yQR-Fe-57o"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressTF" destination="hrs-f4-QAo" id="9N1-zc-CyE"/>
                         <outlet property="emailTF" destination="aGY-AB-Ldc" id="myv-bb-QAL"/>
                         <outlet property="img" destination="lrR-QW-cQS" id="Chj-sO-liL"/>
                         <outlet property="logoutBtn" destination="Gxw-Du-Ayj" id="rUX-dl-iAm"/>
@@ -939,7 +966,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="placeOrder:" destination="oGy-wI-iTg" eventType="touchUpInside" id="b30-Ts-K1B"/>
+                                    <action selector="onPlaceOrderTap:" destination="oGy-wI-iTg" eventType="touchUpInside" id="EAa-V6-dim"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2K-SH-gm4">

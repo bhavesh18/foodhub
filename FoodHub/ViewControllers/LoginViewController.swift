@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         resetData()
+        segment.selectedSegmentIndex = 0
     }
     
     func setupView(){
@@ -130,13 +131,10 @@ class LoginViewController: UIViewController {
         if(self.selectedSegment == 0){
             //login
             if(isValidEntry() && localData.users.contains(where: ({$0.email == self.emailTF.text! && $0.password == self.passwordTF.text!}))){
-                let userData = UserData()
                 let matchedUser = localData.users.first(where: ({$0.email == emailTF.text!}))!
-                userData.name = matchedUser.name
-                userData.phone = matchedUser.phone
-                userData.email = emailTF.text!
-                userData.password = passwordTF.text!
-                localData.currentUser = userData
+                matchedUser.email = emailTF.text!
+                matchedUser.password = passwordTF.text!
+                localData.currentUser = matchedUser
                 goToHomeScreen()
             }else{
                 showAlert(msg: "Invalid Email or password.")
@@ -152,6 +150,7 @@ class LoginViewController: UIViewController {
                     userData.email = self.emailTF.text!
                     userData.phone = self.phoneTF.text!
                     userData.password = self.passwordTF.text!
+                    userData.orderHistory = []
                     localData.users.append(userData)
                     localData.currentUser = userData
                     goToHomeScreen()

@@ -38,26 +38,65 @@ class CartViewController: UIViewController {
         }
     }
     
-    @IBAction func onCloseTap(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
-    
-    @IBAction func placeOrder(_ sender: UIButton) {
+    func placeOrder(){
         if let userIndex = SessionManager.i.getCurrentUserIndex(){
+            
             var newList:[FoodData] = []
             self.cartList.forEach { (f) in
                 f.date = getTimestamp()
                 newList.append(f)
             }
-            dump(newList)
+            
             SessionManager.i.localData.users[userIndex].orderHistory.append(contentsOf: newList)
-            SessionManager.i.localData.currentUser.orderHistory.append(contentsOf: newList)
-            dump(SessionManager.i.localData.currentUser.orderHistory)
+            SessionManager.i.localData.currentUser.orderHistory = SessionManager.i.localData.users[userIndex].orderHistory
             SessionManager.i.localData.cartList = []
             SessionManager.i.save()
+            
             showAlert(msg: "Order Successfull!!") {
                 self.dismiss(animated: true)
             }
+        }
+    }
+    
+    func showInputAlert(){
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Add Your Address", message: "", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter address"
+            textField.text = ""
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {  (_) in
+            let textField = alert.textFields![0] // Force unwrapping because we know it exists.
+            if(textField.text == ""){
+                
+            }else{
+                if let userIndex = SessionManager.i.getCurrentUserIndex(){
+                    SessionManager.i.localData.users[userIndex].address = textField.text ?? ""
+                    SessionManager.i.localData.currentUser.address = textField.text ?? ""
+                    SessionManager.i.save()
+                    self.placeOrder()
+                }
+            }
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func onCloseTap(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func onPlaceOrderTap(_ sender: UIButton) {
+        
+        if(SessionManager.i.localData.currentUser.address == ""){
+            showInputAlert()
+        }else{
+            placeOrder()
         }
     }
 }
@@ -70,6 +109,8 @@ extension CartViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as! CartCell
         cell.configure(data: cartList[indexPath.row], index: indexPath.row)
+        
+        //on delete icon tap
         cell.onRemove = { index in
             self.cartList.remove(at: index)
             SessionManager.i.localData.cartList = self.cartList

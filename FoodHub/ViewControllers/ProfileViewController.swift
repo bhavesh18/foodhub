@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
+    @IBOutlet weak var addressTF: UITextField!
     @IBOutlet weak var updateBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
     
@@ -32,6 +33,7 @@ class ProfileViewController: UIViewController {
         nameTF.text = ud.name
         emailTF.text = ud.email
         phoneTF.text = ud.phone
+        addressTF.text = ud.address
     }
     
     
@@ -49,10 +51,14 @@ class ProfileViewController: UIViewController {
         if let index = localData.users.firstIndex(where: {$0.email == email}){
             localData.users[index].name = nameTF.text!
             localData.users[index].phone = phoneTF.text!
+            localData.users[index].address = addressTF.text ?? ""
             localData.currentUser.name = nameTF.text!
             localData.currentUser.phone = phoneTF.text!
+            localData.currentUser.address = addressTF.text ?? ""
             SessionManager.i.save()
-            showAlert(msg: "Profile updated!")
+            showAlert(msg: "Profile updated!"){
+                self.hideKeyboard()
+            }
         }
         
     }
