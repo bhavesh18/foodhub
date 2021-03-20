@@ -17,6 +17,10 @@
 		1B15979525FCBBD400DEC269 /* FoodHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B15979425FCBBD400DEC269 /* FoodHubUITests.swift */; };
 		1B1597AA25FCD26300DEC269 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1597A925FCD26300DEC269 /* LoginViewController.swift */; };
 		1B1597B025FCD9DC00DEC269 /* MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1597AF25FCD9DC00DEC269 /* MyExtensions.swift */; };
+		1B2C698326033EAA00F6B40F /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2C698226033EAA00F6B40F /* OrderHistoryViewController.swift */; };
+		1B2C698826033F6800F6B40F /* OrderHistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2C698726033F6800F6B40F /* OrderHistoryData.swift */; };
+		1B2C698D2603433E00F6B40F /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2C698C2603433E00F6B40F /* CartCell.swift */; };
+		1B2C699226034CCD00F6B40F /* OrderHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2C699126034CCD00F6B40F /* OrderHistoryCell.swift */; };
 		1B9E766225FE0DC4006E1E85 /* CartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E766125FE0DC4006E1E85 /* CartData.swift */; };
 		1B9E766725FE0DDD006E1E85 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E766625FE0DDD006E1E85 /* LocalData.swift */; };
 		1B9E766C25FE0E26006E1E85 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E766B25FE0E26006E1E85 /* UserData.swift */; };
@@ -64,6 +68,10 @@
 		1B15979625FCBBD400DEC269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B1597A925FCD26300DEC269 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B1597AF25FCD9DC00DEC269 /* MyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensions.swift; sourceTree = "<group>"; };
+		1B2C698226033EAA00F6B40F /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
+		1B2C698726033F6800F6B40F /* OrderHistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryData.swift; sourceTree = "<group>"; };
+		1B2C698C2603433E00F6B40F /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		1B2C699126034CCD00F6B40F /* OrderHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryCell.swift; sourceTree = "<group>"; };
 		1B9E766125FE0DC4006E1E85 /* CartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartData.swift; sourceTree = "<group>"; };
 		1B9E766625FE0DDD006E1E85 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
 		1B9E766B25FE0E26006E1E85 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -165,6 +173,7 @@
 				1BD1A05225FD13A10025C866 /* ProfileViewController.swift */,
 				1BD1A05725FD13A90025C866 /* CartViewController.swift */,
 				1BD1A05C25FD15E80025C866 /* FoodDetailViewController.swift */,
+				1B2C698226033EAA00F6B40F /* OrderHistoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				1BD1A04425FD01160025C866 /* FoodCell.swift */,
+				1B2C698C2603433E00F6B40F /* CartCell.swift */,
+				1B2C699126034CCD00F6B40F /* OrderHistoryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -194,6 +205,7 @@
 				1B9E766125FE0DC4006E1E85 /* CartData.swift */,
 				1B9E766625FE0DDD006E1E85 /* LocalData.swift */,
 				1B9E766B25FE0E26006E1E85 /* UserData.swift */,
+				1B2C698726033F6800F6B40F /* OrderHistoryData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,11 +346,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2C699226034CCD00F6B40F /* OrderHistoryCell.swift in Sources */,
+				1B2C698326033EAA00F6B40F /* OrderHistoryViewController.swift in Sources */,
 				1B9E766725FE0DDD006E1E85 /* LocalData.swift in Sources */,
+				1B2C698826033F6800F6B40F /* OrderHistoryData.swift in Sources */,
 				1BD1A04E25FD02020025C866 /* FoodData.swift in Sources */,
 				1BD1A06225FD2E720025C866 /* Constants.swift in Sources */,
 				1B1597AA25FCD26300DEC269 /* LoginViewController.swift in Sources */,
 				1BD1A04525FD01160025C866 /* FoodCell.swift in Sources */,
+				1B2C698D2603433E00F6B40F /* CartCell.swift in Sources */,
 				1BD1A05D25FD15E80025C866 /* FoodDetailViewController.swift in Sources */,
 				1B9E766C25FE0E26006E1E85 /* UserData.swift in Sources */,
 				1B9E766225FE0DC4006E1E85 /* CartData.swift in Sources */,

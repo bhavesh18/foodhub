@@ -37,8 +37,24 @@ class ProfileViewController: UIViewController {
     
     //MARK:- IBOutlets
     
+    @IBAction func onCancelBtnTap(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
     @IBAction func update(_ sender: UIButton) {
     
+        let localData = SessionManager.i.localData
+        let email = localData.currentUser.email
+        if let index = localData.users.firstIndex(where: {$0.email == email}){
+            localData.users[index].name = nameTF.text!
+            localData.users[index].phone = phoneTF.text!
+            localData.currentUser.name = nameTF.text!
+            localData.currentUser.phone = phoneTF.text!
+            SessionManager.i.save()
+            showAlert(msg: "Profile updated!")
+        }
+        
     }
     
     @IBAction func logout(_ sender: UIButton) {

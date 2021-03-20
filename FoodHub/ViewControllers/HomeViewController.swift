@@ -23,20 +23,32 @@ class HomeViewController: UIViewController {
     }
 
     func setupView(){
-        welcomeLabel.text = "Hi " + SessionManager.i.localData.currentUser.name + ","
         tableView.dataSource = self
         tableView.delegate = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        welcomeLabel.text = "Hi " + SessionManager.i.localData.currentUser.name + ","
+    }
+    
     //MARK:- IBActions
     
     @IBAction func onProfileTap(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     
     @IBAction func onCartTap(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    @IBAction func onOrderHistoryTap(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OrderHistoryViewController") as! OrderHistoryViewController
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     

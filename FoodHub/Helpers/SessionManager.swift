@@ -28,4 +28,8 @@ class SessionManager{
         }
     }
     
+    func getCurrentUserIndex()->Int?{
+        return localData.users.firstIndex(where: {$0.email == localData.currentUser.email})
+    }
+    
 }

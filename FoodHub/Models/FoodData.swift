@@ -13,6 +13,8 @@ class FoodData: Codable{
     var calogries: String
     var price: Double
     var detail: String
+    var quantity: Int = 1
+    var date: String = ""
     
     init(img: String, name: String, calogries: String, price: Double, detail: String) {
         self.img = img

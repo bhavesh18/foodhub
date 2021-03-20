@@ -10,7 +10,7 @@ import Foundation
 class LocalData: Codable{
     var currentUser = UserData()
     var users: [UserData] = []
-    var cartData: CartData?
+    var cartList: [FoodData] = []
     var isLoggedIn = false
         
 }

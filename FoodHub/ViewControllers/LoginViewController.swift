@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        print(SessionManager.i.localData.users.getJsonString())
         setupView()
     }
 
@@ -40,6 +40,10 @@ class LoginViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        resetData()
+    }
     
     func setupView(){
         //setting up view layouts
@@ -53,9 +57,11 @@ class LoginViewController: UIViewController {
 
     //resetting data to default state
     func resetData(){
+        hideKeyboard()
+        nameTF.text = ""
         emailTF.text = ""
-        passwordTF.text = ""
         phoneTF.text = ""
+        passwordTF.text = ""
         confPasswordTF.text = ""
     }
     

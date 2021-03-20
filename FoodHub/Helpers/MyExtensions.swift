@@ -59,17 +59,58 @@ extension String{
     
 }
 
+extension UIView{
+
+    @IBInspectable var cornerRadius: CGFloat {
+        get{
+            return layer.cornerRadius
+        }
+        set{
+            self.layer.cornerRadius = newValue
+            self.clipsToBounds = newValue > 0
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
+}
+
 extension UIViewController{
-    func showAlert(msg: String){
+    func showAlert(msg: String, handler: (()->())? = nil){
         let alert = UIAlertController(title: msg, message: "", preferredStyle: UIAlertController.Style.alert)
 
                 // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default,handler: { (action) in
+            handler?()
+        }))
 
                 // show the alert
                 self.present(alert, animated: true, completion: nil)
     }
 
+    func hideKeyboard(){
+        self.view.endEditing(true)
+    }
+    
+    func getTimestamp()->String {
+        let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .short)
+        return timestamp
+    }
 }
 
 
