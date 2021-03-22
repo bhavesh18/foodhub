@@ -8,19 +8,18 @@
 import UIKit
 
 class FoodDetailViewController: UIViewController {
-
-    var foodData: FoodData!
-    
+    //MARK:- Outlets
     @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var detail: UITextView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var calories: UILabel!
     @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var detail: UITextView!
-    
     @IBOutlet weak var quantity: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var cartBtn: UIButton!
     
+    //MARK:- Variables
+    var foodData: FoodData!
     var totalQuantity: Int = 0
     var totalAmount: Double = 0
     
@@ -63,6 +62,7 @@ class FoodDetailViewController: UIViewController {
             self.dismiss(animated: true)
         }
     }
+    
     @IBAction func onBack(_ sender: UIButton) {
         dismiss(animated: true)
     }

@@ -9,10 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    //MARK:- Tableview and Label
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    
+    //MARK:- Variables
     var list: [FoodData] = Constants.foodList
     
     override func viewDidLoad() {

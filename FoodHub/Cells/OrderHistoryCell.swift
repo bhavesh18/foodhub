@@ -15,7 +15,7 @@ class OrderHistoryCell: UITableViewCell{
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
-    
+    //updating cell data
     func configure(data: FoodData){
         imgView.image = UIImage(named: data.img)
         nameLabel.text = data.name

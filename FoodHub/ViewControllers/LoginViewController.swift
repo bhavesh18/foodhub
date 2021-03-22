@@ -9,19 +9,23 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //MARK:- Imageview and segment
     @IBOutlet weak var wallpaperIV: UIImageView!
     @IBOutlet weak var segment: UISegmentedControl!
     
+    //MARK:- TextFields
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confPasswordTF: UITextField!
     
+    //MARK:- Stackview
     @IBOutlet weak var nameStackView: UIStackView!
     @IBOutlet weak var phoneStackView: UIStackView!
     @IBOutlet weak var confPassStackView: UIStackView!
     
+    //MARK:- Button
     @IBOutlet weak var loginBtn: UIButton!
     
     //MARK:- variables
@@ -29,10 +33,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(SessionManager.i.localData.users.getJsonString())
+        //print(SessionManager.i.localData.users.getJsonString())
         setupView()
     }
 
+    //checking if user already logged in then moving to homescreen.
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if(SessionManager.i.localData.isLoggedIn){
@@ -40,17 +45,18 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //when view disappear we reset our UI
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         resetData()
         segment.selectedSegmentIndex = 0
     }
     
+    //setting up view layouts
     func setupView(){
-        //setting up view layouts
         wallpaperIV.layer.cornerRadius = 30
-        segment.setTitleColor(.white, state: .selected)
         confPassStackView.isHidden = true
+        segment.setTitleColor(.white, state: .selected)
         nameStackView.isHidden = true
         phoneStackView.isHidden = true
         loginBtn.layer.cornerRadius = 12
@@ -66,6 +72,7 @@ class LoginViewController: UIViewController {
         confPasswordTF.text = ""
     }
     
+    //moving to the home screen
     func goToHomeScreen(){
         SessionManager.i.save()
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
@@ -73,6 +80,7 @@ class LoginViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    //validating entries by user
     func isValidEntry() -> Bool{
         if(selectedSegment == 0){
             //login

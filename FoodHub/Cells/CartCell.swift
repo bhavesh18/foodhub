@@ -18,6 +18,7 @@ class CartCell: UITableViewCell{
     var index = 0
     var onRemove: ((Int)->())? = nil
     
+    //updating cell data
     func configure(data: FoodData, index: Int){
         self.index = index
         imgView.image = UIImage(named: data.img)

@@ -21,7 +21,7 @@ class FoodCell: UITableViewCell{
         img.image = nil
     }
     
-    
+    //updating cell data
     func configure(data: FoodData){
         cellView.clipsToBounds = true
         cellView.layer.cornerRadius = 12

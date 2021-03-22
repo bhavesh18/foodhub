@@ -8,11 +8,12 @@
 import UIKit
 
 class OrderHistoryViewController: UIViewController {
-    
+    //MARK:- Tableview
     @IBOutlet weak var tableView: UITableView!
-    
+    //MARK:- Label
     @IBOutlet weak var noOrderLabel: UILabel!
     
+    //MARK:- variable
     let orderList = SessionManager.i.localData.currentUser.orderHistory
     
     override func viewDidLoad() {

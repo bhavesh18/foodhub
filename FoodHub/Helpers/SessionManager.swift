@@ -12,8 +12,6 @@ class SessionManager{
     static let i = SessionManager()
     var localData = LocalData()
     
-    
-    
     init() {
         if let data = UserDefaults.standard.string(forKey: Constants.LOCAL_DATA){
             if let ld = data.getObject(ofType: LocalData()){

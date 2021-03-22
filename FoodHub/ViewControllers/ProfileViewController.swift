@@ -9,12 +9,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    //MARK:- ImageView
     @IBOutlet weak var img: UIImageView!
     
+    //MARK:- Textfields
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var addressTF: UITextField!
+    
+    //MARK:- Buttons
     @IBOutlet weak var updateBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
     

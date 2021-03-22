@@ -8,11 +8,12 @@
 import UIKit
 
 class CartViewController: UIViewController {
-    
+    //MARK:- Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyCartLabel: UILabel!
     @IBOutlet weak var placeOrderBtn: UIButton!
     
+    //MARK:- Variable
     var cartList:[FoodData] = []
     
     override func viewDidLoad() {
@@ -87,6 +88,7 @@ class CartViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    //MARK:- Action
     @IBAction func onCloseTap(_ sender: UIButton) {
         dismiss(animated: true)
     }
