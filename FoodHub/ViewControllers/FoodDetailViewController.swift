@@ -23,6 +23,8 @@ class FoodDetailViewController: UIViewController {
     var totalQuantity: Int = 0
     var totalAmount: Double = 0
     
+    var shakeOnce = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +34,7 @@ class FoodDetailViewController: UIViewController {
     func setupView(){
         img.image = UIImage(named: foodData.img)
         name.text = foodData.name
-        calories.text = foodData.calogries + " calories"
+        calories.text = foodData.calories + " calories"
         detail.text = foodData.detail
         price.text = "$\(foodData.price)"
         quantity.text = foodData.name + " (x\(totalQuantity))"
@@ -51,6 +53,12 @@ class FoodDetailViewController: UIViewController {
         quantity.text = foodData.name + "(x\(totalQuantity))"
         totalAmount = Double(totalQuantity)*foodData.price
         totalPrice.text = "$"+String(totalAmount)
+        
+        if(shakeOnce){
+            cartBtn.shake()
+        }
+        
+        shakeOnce = sender.value == 0 ? true : false
     }
     
     @IBAction func addToCart(_ sender: UIButton) {

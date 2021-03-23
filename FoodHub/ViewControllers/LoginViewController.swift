@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         resetData()
+        setupView()
         segment.selectedSegmentIndex = 0
     }
     
@@ -122,6 +123,34 @@ class LoginViewController: UIViewController {
         return true
     }
     
+    func showInputAlert(){
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Forgot Password", message: "", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.placeholder = "Enter email"
+            textField.text = ""
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {  (_) in
+            let textField = alert.textFields![0] // Force unwrapping because we know it exists.
+            if(textField.text == ""){
+                
+            }else{
+                if let user = SessionManager.i.localData.users.first(where: {$0.email == textField.text!}){
+                    self.showAlert(msg: "Your password is: \(user.password)")
+                }else{
+                    self.showAlert(msg: "Make sure the email is correct.")
+                }
+            }
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     //MARK:- IBActions
     
     @IBAction func onSegmentTap(_ sender: UISegmentedControl) {
@@ -166,6 +195,10 @@ class LoginViewController: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func onForgotPasswordTap(_ sender: UIButton) {
+        showInputAlert()
     }
     
 }

@@ -27,7 +27,7 @@ class FoodCell: UITableViewCell{
         cellView.layer.cornerRadius = 12
         img.image = UIImage(named: data.img)
         name.text = data.name
-        calogries.text = data.calogries + " Calories"
+        calogries.text = data.calories + " Calories"
         price.text = "$\(data.price)"
     }
     

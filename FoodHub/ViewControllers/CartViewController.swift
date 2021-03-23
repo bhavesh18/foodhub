@@ -40,23 +40,29 @@ class CartViewController: UIViewController {
     }
     
     func placeOrder(){
-        if let userIndex = SessionManager.i.getCurrentUserIndex(){
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        vc.onPayment={
             
-            var newList:[FoodData] = []
-            self.cartList.forEach { (f) in
-                f.date = getTimestamp()
-                newList.append(f)
-            }
-            
-            SessionManager.i.localData.users[userIndex].orderHistory.append(contentsOf: newList)
-            SessionManager.i.localData.currentUser.orderHistory = SessionManager.i.localData.users[userIndex].orderHistory
-            SessionManager.i.localData.cartList = []
-            SessionManager.i.save()
-            
-            showAlert(msg: "Order Successfull!!") {
-                self.dismiss(animated: true)
+            if let userIndex = SessionManager.i.getCurrentUserIndex(){
+                
+                var newList:[FoodData] = []
+                self.cartList.forEach { (f) in
+                    f.date = self.getTimestamp()
+                    newList.append(f)
+                }
+                
+                SessionManager.i.localData.users[userIndex].orderHistory.append(contentsOf: newList)
+                SessionManager.i.localData.currentUser.orderHistory = SessionManager.i.localData.users[userIndex].orderHistory
+                SessionManager.i.localData.cartList = []
+                SessionManager.i.save()
+                
+                self.showAlert(msg: "Order Successfull!!") {
+                    self.dismiss(animated: true)
+                }
             }
         }
+        present(vc, animated: true)
     }
     
     func showInputAlert(){

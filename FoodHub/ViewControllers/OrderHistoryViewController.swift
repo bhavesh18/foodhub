@@ -24,8 +24,13 @@ class OrderHistoryViewController: UIViewController {
         }
     }
     
+    //MARK:- Actions
     @IBAction func onCloseTap(_ sender: UIButton) {
         dismiss(animated: true)
+    }
+    
+    @IBAction func onHelpTap(_ sender: UIButton) {
+        showAlert(msg: "Feel free to contact us: 631-3855-444")
     }
     
     

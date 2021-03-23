@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     //MARK:- Tableview and Label
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var cartBadge: UILabel!
     
     //MARK:- Variables
     var list: [FoodData] = Constants.foodList
@@ -28,9 +29,21 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
     }
 
+    func handleCartBadge(){
+        if(SessionManager.i.localData.cartList.count == 0){
+            cartBadge.isHidden = true
+            cartBadge.text = ""
+        }else{
+            cartBadge.isHidden = false
+            cartBadge.text = "\(SessionManager.i.localData.cartList.count)"
+        }
+
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         welcomeLabel.text = "Hi " + SessionManager.i.localData.currentUser.name + ","
+        handleCartBadge()
     }
     
     //MARK:- IBActions
@@ -53,7 +66,6 @@ class HomeViewController: UIViewController {
         present(vc, animated: true)
     }
     
-    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -70,6 +82,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowData = list[indexPath.row]
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
+        vc.modalPresentationStyle = .fullScreen
         vc.foodData = rowData
         present(vc, animated: true)
 

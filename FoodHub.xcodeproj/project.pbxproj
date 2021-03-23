@@ -26,6 +26,7 @@
 		1B9E766C25FE0E26006E1E85 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E766B25FE0E26006E1E85 /* UserData.swift */; };
 		1B9E767425FE1DDD006E1E85 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E767325FE1DDD006E1E85 /* SessionManager.swift */; };
 		1B9E767E25FE686A006E1E85 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1B9E767D25FE686A006E1E85 /* IQKeyboardManagerSwift */; };
+		1BAEC4832609DF1A007BFB4C /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEC4822609DF1A007BFB4C /* PaymentViewController.swift */; };
 		1BD1A04525FD01160025C866 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1A04425FD01160025C866 /* FoodCell.swift */; };
 		1BD1A04E25FD02020025C866 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1A04D25FD02020025C866 /* FoodData.swift */; };
 		1BD1A05325FD13A10025C866 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD1A05225FD13A10025C866 /* ProfileViewController.swift */; };
@@ -76,6 +77,7 @@
 		1B9E766625FE0DDD006E1E85 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
 		1B9E766B25FE0E26006E1E85 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1B9E767325FE1DDD006E1E85 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		1BAEC4822609DF1A007BFB4C /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		1BD1A04425FD01160025C866 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		1BD1A04D25FD02020025C866 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		1BD1A05225FD13A10025C866 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				1BD1A05725FD13A90025C866 /* CartViewController.swift */,
 				1BD1A05C25FD15E80025C866 /* FoodDetailViewController.swift */,
 				1B2C698226033EAA00F6B40F /* OrderHistoryViewController.swift */,
+				1BAEC4822609DF1A007BFB4C /* PaymentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				1BD1A04E25FD02020025C866 /* FoodData.swift in Sources */,
 				1BD1A06225FD2E720025C866 /* Constants.swift in Sources */,
 				1B1597AA25FCD26300DEC269 /* LoginViewController.swift in Sources */,
+				1BAEC4832609DF1A007BFB4C /* PaymentViewController.swift in Sources */,
 				1BD1A04525FD01160025C866 /* FoodCell.swift in Sources */,
 				1B2C698D2603433E00F6B40F /* CartCell.swift in Sources */,
 				1BD1A05D25FD15E80025C866 /* FoodDetailViewController.swift in Sources */,
