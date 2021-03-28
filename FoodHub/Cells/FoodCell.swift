@@ -22,9 +22,8 @@ class FoodCell: UITableViewCell{
     }
     
     //updating cell data
-    func configure(data: FoodData){
-        cellView.clipsToBounds = true
-        cellView.layer.cornerRadius = 12
+    func configure(data: FoodData, restaurant: String = ""){
+        img.contentMode = (restaurant == "Tim Horton") ? .scaleAspectFit : .scaleAspectFill
         img.image = UIImage(named: data.img)
         name.text = data.name
         calogries.text = data.calories + " Calories"

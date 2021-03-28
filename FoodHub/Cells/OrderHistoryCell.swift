@@ -14,6 +14,7 @@ class OrderHistoryCell: UITableViewCell{
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var restaurantLabel: UILabel!
     
     //updating cell data
     func configure(data: FoodData){
@@ -22,6 +23,7 @@ class OrderHistoryCell: UITableViewCell{
         quantityLabel.text = "Qty: \(data.quantity)"
         priceLabel.text = "Price: $\(data.price * Double(data.quantity))"
         dateLabel.text = "Date: " + data.date
+        restaurantLabel.text = "(" + data.restaurant + ")"
     }
     
 }

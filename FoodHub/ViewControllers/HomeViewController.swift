@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cartBadge: UILabel!
     
     //MARK:- Variables
-    var list: [FoodData] = Constants.foodList
+    var list: [RestaurantData] = Constants.resaturantList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,21 +72,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         list.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell", for: indexPath) as! FoodCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantCell
         cell.configure(data: list[indexPath.row])
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rowData = list[indexPath.row]
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FoodDetailViewController") as! FoodDetailViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FoodListViewController") as! FoodListViewController
         vc.modalPresentationStyle = .fullScreen
-        vc.foodData = rowData
+        vc.list = rowData.foodList
+        vc.restaurantName = rowData.name
         present(vc, animated: true)
 
     }
-    
+
 }
 

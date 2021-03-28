@@ -19,6 +19,7 @@ class FoodDetailViewController: UIViewController {
     @IBOutlet weak var cartBtn: UIButton!
     
     //MARK:- Variables
+    var restaurantName = ""
     var foodData: FoodData!
     var totalQuantity: Int = 0
     var totalAmount: Double = 0
@@ -64,6 +65,7 @@ class FoodDetailViewController: UIViewController {
     @IBAction func addToCart(_ sender: UIButton) {
         guard let fd = foodData else{return}
         fd.quantity = totalQuantity
+        fd.restaurant = restaurantName
         SessionManager.i.localData.cartList.append(fd)
         SessionManager.i.save()
         showAlert(msg: "Added to cart!") {

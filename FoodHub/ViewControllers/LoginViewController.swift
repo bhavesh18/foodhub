@@ -51,6 +51,7 @@ class LoginViewController: UIViewController {
         resetData()
         setupView()
         segment.selectedSegmentIndex = 0
+        loginBtn.setTitle("Login", for: .normal)
     }
     
     //setting up view layouts
